@@ -1,46 +1,160 @@
-/* style.css */
-body {
+/* Reset básico */
+* {
   margin: 0;
-  font-family: 'Segoe UI', sans-serif;
-  background: #f5f5f5;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  line-height: 1.6;
+  background-color: #f1f1f1;
   color: #333;
 }
 
+/* HEADER */
 header {
-  background-color: #002244;
+  background-color: #002b51;
   color: white;
-  padding: 1rem;
+  padding: 1rem 2rem;
   display: flex;
   justify-content: space-between;
   align-items: center;
 }
 
-nav a {
-  color: white;
-  margin: 0 1rem;
-  text-decoration: none;
+header h1 {
+  font-size: 1.8rem;
 }
 
-.hero {
-  padding: 3rem;
-  text-align: center;
-  background: linear-gradient(to right, #003366, #005599);
+nav a {
   color: white;
+  margin-left: 1.5rem;
+  text-decoration: none;
+  font-weight: 500;
+}
+
+nav a:hover {
+  text-decoration: underline;
+}
+
+/* HERO SECTION (si lo tienes en index.html) */
+.hero {
+  background: linear-gradient(to right, #004080, #0059b3);
+  color: white;
+  text-align: center;
+  padding: 4rem 1rem;
+}
+
+.hero h2 {
+  font-size: 2rem;
+  margin-bottom: 1rem;
+}
+
+.hero p {
+  font-size: 1.1rem;
+  margin-bottom: 2rem;
 }
 
 .hero .btn {
-  margin-top: 1rem;
-  padding: 0.75rem 1.5rem;
-  background: white;
-  color: #003366;
-  text-decoration: none;
-  border-radius: 5px;
+  background-color: white;
+  color: #005599;
+  padding: 0.7rem 1.4rem;
   font-weight: bold;
+  border-radius: 5px;
+  text-decoration: none;
+  transition: background-color 0.3s;
 }
 
-footer {
-  padding: 1rem;
+.hero .btn:hover {
+  background-color: #eee;
+}
+
+/* CONTENIDO PRINCIPAL */
+main {
+  padding: 2rem;
+}
+
+/* ALOJAMIENTOS */
+.alojamientos {
+  background-color: #f9f9f9;
+}
+
+.alojamientos h2 {
   text-align: center;
-  background-color: #ddd;
+  margin-bottom: 2rem;
+  font-size: 1.8rem;
+  color: #002b51;
+}
+
+.card {
+  background: white;
+  border-radius: 8px;
+  margin: 1.5rem auto;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.08);
+  overflow: hidden;
+  max-width: 800px;
+}
+
+.card img {
+  width: 100%;
+  height: auto;
+  display: block;
+}
+
+.card .info {
+  padding: 1.5rem;
+}
+
+.card .info h3 {
+  font-size: 1.5rem;
+  color: #003366;
+  margin-bottom: 0.5rem;
+}
+
+.card .info p {
+  margin-bottom: 1rem;
+}
+
+.card .btn {
+  display: inline-block;
+  background-color: #005599;
+  color: white;
+  padding: 0.6rem 1rem;
+  text-decoration: none;
+  border-radius: 4px;
+  transition: background 0.3s;
+}
+
+.card .btn:hover {
+  background-color: #003f80;
+}
+
+/* FOOTER */
+footer {
+  text-align: center;
+  padding: 1rem;
+  background-color: #e3e3e3;
+  font-size: 0.9rem;
   margin-top: 3rem;
+}
+
+/* RESPONSIVE */
+@media (max-width: 768px) {
+  header {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  nav {
+    margin-top: 1rem;
+  }
+
+  nav a {
+    display: inline-block;
+    margin: 0.5rem 0;
+  }
+
+  .card {
+    margin: 1rem;
+  }
 }
